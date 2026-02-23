@@ -2,22 +2,20 @@
 
 :root {
     --light: #ffffffd5;
-    --primary: #1976D2;
-    --light-primary: #CFE8FF;
-    /* --grey: #f0ececd5; */
-    /* --grey: #dee2e6c4; */
+    --primary: #10b981;
+    --light-primary: #d1fae5;
 
     --grey: #e4e4e4fd;
-    --dark-grey: #AAAAAA;
-    --dark: #363949;
-    --danger: #D32F2F;
-    --light-danger: #FECDD3;
-    --warning: #FBC02D;
-    --light-warning: #FFF2C6;
-    --success: #388E3C;
-    --light-success: #BBF7D0;
-    --light-text: #0066ff;
-    --dark-text: rgb(71, 219, 230);
+    --dark-grey: #94a3b8;
+    --dark: #1e293b;
+    --danger: #ef4444;
+    --light-danger: #fee2e2;
+    --warning: #f59e0b;
+    --light-warning: #fef3c7;
+    --success: #059669;
+    --light-success: #d1fae5;
+    --light-text: #059669;
+    --dark-text: #34d399;
     --white: white;
 
 }
@@ -95,7 +93,7 @@ body.dark {
     --light: #181a1e;
     --grey: #25252c;
     --dark: #fbfbfb;
-    --light-text: rgb(71, 219, 230);
+    --light-text: #34d399;
     --white: #181a1e;
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -184,7 +182,8 @@ body::-webkit-scrollbar {
 .sidebar.close {
     width: 60px;
 }
-.wdp-hour-arrow-container{
+
+.wdp-hour-arrow-container {
     height: 30px;
 }
 
@@ -324,7 +323,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightblue;
+    background: #d1fae5;
     transition: all 0.5s ease;
     overflow: hidden;
 }
@@ -1166,7 +1165,8 @@ div._flex-container button {
 .remove-table-hover tr {
     cursor: default;
 }
-.remove_hover_table tbody tr{
+
+.remove_hover_table tbody tr {
     background-color: transparent !important;
 }
 
@@ -1847,7 +1847,7 @@ div._flex-container button {
 }
 
 .modal-body input[type=date] {
-    
+
     max-width: 500px;
     color: var(--light-text);
     background-color: var(--grey);
@@ -2321,9 +2321,11 @@ td.tableData {
 .teacher-leave-insights .rejected-insight .side-icon {
     background-color: var(--light-danger);
 }
-#create-subject-form select{
+
+#create-subject-form select {
     width: 100% !important;
 }
+
 .teacher-leave-insights .total-staff-insight .side-icon .bx {
     color: var(--primary);
 }

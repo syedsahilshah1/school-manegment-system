@@ -17,7 +17,7 @@ PHP School management system developed for schools or small institutes. You can 
   4. Notice Upload 
   5. Exam result upload
   6. Notes upload
-  7. Bus Service  
+
   8. Syllabus upload / update
   9. Time table
   10. Attendence Management
@@ -25,7 +25,7 @@ PHP School management system developed for schools or small institutes. You can 
   12. Front Page 
   13. Single login
   14. Dark theme support
-  15. Multi-Language Support <small style="color: orange;">(new)</small>
+  15. English and Urdu Language Support <small style="color: orange;">(new)</small>
 
 ## 🦤 SCREENSHOTS
 

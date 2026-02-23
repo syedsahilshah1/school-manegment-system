@@ -243,11 +243,12 @@
                             <select class="form-select" aria-label="Default select example" id="state" name="state"
                                 required>
                                 <option selected disabled value="">--select--</option>
-                                <option value="Hariyana">Hariyana</option>
-                                <option value="UP">UP</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Panjab">Panjab</option>
-                                <option value="Gujrat">Gujrat</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="KPK">KPK</option>
+                                <option value="Balochistan">Balochistan</option>
+                                <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+                                <option value="Azad Kashmir">Azad Kashmir</option>
                             </select>
                             <div class="invalid-feedback">
                                 required!

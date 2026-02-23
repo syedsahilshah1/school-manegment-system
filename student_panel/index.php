@@ -126,8 +126,8 @@
 
         .link-btn {
             display: block;
-            border: 1px solid rgb(214 183 255);
-            background-color: rgb(212 196 255 / 77%);
+            border: 1px solid #6ee7b7;
+            background-color: rgba(209, 250, 229, 0.77);
             color: #000000;
             padding: 8px 10px;
             border-radius: 5px;
@@ -141,7 +141,7 @@
     <header>
         <div class="logo" title="University Management System">
             <img src="./images/logo.png" alt="">
-            <h2>E<span class="danger">R</span>P</h2>
+            <h2>D<span class="danger">S</span>CH</h2>
         </div>
         <div class="navbar">
             <a href="index.php">

@@ -1,15 +1,11 @@
 
 <div class="sidebar">
     <a href="dashboard.php" class="logo">
-        <!-- <i class='bx bx-book-bookmark'></i> -->
-        <img src="../images/1.png">
-          <div class="logo-name"><span class="text-warning">E</span><span class="darkTextColor">R</span><span class="text-warning">P</span></div>
+        <i class='bx bxs-book-reader'></i>
+        <div class="logo-name"><span class="text-warning">D</span><span class="darkTextColor">S</span><span class="text-warning">C</span><span class="darkTextColor">H</span></div>
     </a>
     
       <ul class="side-menu-opener">
-        <!-- <li>
-            <div class='open-arrow SidebarOpener'><i class='bx bxs-chevron-right'></i></div>
-        </li> -->
     </ul>
     
     <ul class="side-menu main-side-board">
@@ -23,7 +19,7 @@
         <li><a href="syllabus.php"><i class='bx bx-file-blank'></i>Syllabus</a></li>
         <li><a href="notes.php"><i class='bx bx-note'></i>Notes</a></li>
         <li><a href="marks.php"><i class='bx bx-paste'></i>Marks</a></li>
-        <li><a href="buses.php"><i class='bx bxs-bus'></i>Bus Service</a></li>
+
         <li><a href="settings.php"><i class='bx bx-cog'></i>Settings</a></li>
     </ul>
     <ul class="side-menu">

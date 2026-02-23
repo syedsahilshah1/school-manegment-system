@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`s_no`, `id`, `fname`, `lname`, `dob`, `image`, `phone`, `gender`, `address`) VALUES
-(2, 'A9876543210', 'Admin', 'Kumar', '12/11/2024', 'A98765432101718792069.png', '1234567890', 'male', 'no where');
+(2, 'DSCH-01', 'Admin', 'User', '12/11/2024', 'DSCH-01.png', '1234567890', 'male', 'no where');
 
 -- --------------------------------------------------------
 
@@ -300,7 +300,7 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`s_no`, `sender_id`, `editor_id`, `class`, `subject`, `title`, `comment`, `file`, `timestamp`) VALUES
-(1, 'A9876543210', 'A9876543210', '12c', 'Hindi', 'Hindi Homework ', 'do this on time', 'A98765432101718791715.png', '2024-06-19 15:38:35');
+(1, 'DSCH-01', 'DSCH-01', '12c', 'Hindi', 'Hindi Homework ', 'do this on time', 'DSCH-011718791715.png', '2024-06-19 15:38:35');
 
 -- --------------------------------------------------------
 
@@ -326,9 +326,9 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`s_no`, `sender_id`, `editor_id`, `title`, `body`, `file`, `importance`, `timestamp`, `role`, `class`) VALUES
-(51, 'A9876543210', 'A9876543210', 'Notice title', 'body', 'A98765432101718791385.png', '2', '2024-06-19 15:33:05', '', ''),
-(52, 'A9876543210', 'A9876543210', 'Title 2', 'body 2', 'A98765432101718791411.png', '3', '2024-06-19 15:33:31', '', ''),
-(53, 'A9876543210', 'A9876543210', 'Holiday notice', 'enjoy your holidays', 'A98765432101718791447.png', '1', '2024-06-19 15:34:07', '', '');
+(51, 'DSCH-01', 'DSCH-01', 'Notice title', 'body', 'DSCH-011718791385.png', '2', '2024-06-19 15:33:05', '', ''),
+(52, 'DSCH-01', 'DSCH-01', 'Title 2', 'body 2', 'DSCH-011718791411.png', '3', '2024-06-19 15:33:31', '', ''),
+(53, 'DSCH-01', 'DSCH-01', 'Holiday notice', 'enjoy your holidays', 'DSCH-011718791447.png', '1', '2024-06-19 15:34:07', '', '');
 
 -- --------------------------------------------------------
 
@@ -384,8 +384,8 @@ CREATE TABLE `reminders` (
 INSERT INTO `reminders` (`s_no`, `id`, `message`, `status`) VALUES
 (68, 'T1718791191', 'Post a homework daily', 'completed'),
 (69, 'T1718791191', 'principal meeting', 'pending'),
-(70, 'A9876543210', 'Reminder for myself : have a good day', 'pending'),
-(71, 'A9876543210', '\nBest of luck', 'completed');
+(70, 'DSCH-01', 'Reminder for myself : have a good day', 'pending'),
+(71, 'DSCH-01', '\nBest of luck', 'completed');
 
 -- --------------------------------------------------------
 
@@ -573,14 +573,14 @@ CREATE TABLE `time_table` (
 --
 
 INSERT INTO `time_table` (`s_no`, `class`, `section`, `start_time`, `end_time`, `mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `editor_id`, `timestamp`) VALUES
-(1, '12c', 'A', '07:00', '08:00', 'Hindi', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(2, '12c', 'A', '08:00', '09:00', 'English', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(3, '12c', 'A', '09:00', '10:00', 'Math', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(4, '12c', 'A', '10:00', '11:00', 'Hindi', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(5, '12c', 'A', '11:00', '12:00', 'English', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(6, '12c', 'A', '12:00', '01:00', 'Commerce', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(7, '12c', 'A', '01:00', '02:00', 'Commerce', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37'),
-(8, '12c', 'A', '02:00', '03:00', 'Hindi', '', '', '', '', '', 'A9876543210', '2024-06-19 15:37:37');
+(1, '12c', 'A', '07:00', '08:00', 'Hindi', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(2, '12c', 'A', '08:00', '09:00', 'English', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(3, '12c', 'A', '09:00', '10:00', 'Math', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(4, '12c', 'A', '10:00', '11:00', 'Hindi', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(5, '12c', 'A', '11:00', '12:00', 'English', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(6, '12c', 'A', '12:00', '01:00', 'Commerce', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(7, '12c', 'A', '01:00', '02:00', 'Commerce', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37'),
+(8, '12c', 'A', '02:00', '03:00', 'Hindi', '', '', '', '', '', 'DSCH-01', '2024-06-19 15:37:37');
 
 -- --------------------------------------------------------
 
@@ -602,7 +602,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`s_no`, `id`, `email`, `password_hash`, `role`, `theme`) VALUES
-(1, 'A9876543210', 'admin@gmail.com', '$2y$10$2MrhbQa30mll8mKG6LPyjuI7CQPC4abCvqrSvczxXVRu4RVueRfoe', 'admin', 'light'),
+(1, 'DSCH-01', 'admin@gmail.com', '$2y$10$2MrhbQa30mll8mKG6LPyjuI7CQPC4abCvqrSvczxXVRu4RVueRfoe', 'admin', 'light'),
 (2, 'T1718791191', 'teacher@gmail.com', '$2y$10$2MrhbQa30mll8mKG6LPyjuI7CQPC4abCvqrSvczxXVRu4RVueRfoe', 'teacher', 'light'),
 (3, 'S1718791292', 'student@gmail.com', '$2y$10$2MrhbQa30mll8mKG6LPyjuI7CQPC4abCvqrSvczxXVRu4RVueRfoe', 'student', 'light'),
 (4, 'O7898987845', 'owner@gmail.com', '$2y$10$2MrhbQa30mll8mKG6LPyjuI7CQPC4abCvqrSvczxXVRu4RVueRfoe', 'owner', 'light');

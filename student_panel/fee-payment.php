@@ -93,21 +93,27 @@ height: 100vh !important;
                   
                   <select class="form-select" aria-label="Default select example" id="select">
   <option selected>Open this select menu</option>
-  <option value="nu-ukg">Nur-UKG</option>
-  <option value="1">Class 1</option>
-  <option value="2">Class 2</option>
-  <option value="3">Class 3</option>
-  <option value="4">Class 4</option>
-  <option value="5">Class 5</option>
-  <option value="6">Class 6</option>
-  <option value="7">Class 7</option>
+  <option value="12m">12 (Medical)</option>
+  <option value="11m">11 (Medical)</option>
+  <option value="12pe">12 (Pre-Engineering)</option>
+  <option value="11pe">11 (Pre-Engineering)</option>
+  <option value="12cs">12 (Computer Science)</option>
+  <option value="11cs">11 (Computer Science)</option>
+  <option value="10s">10 (Science)</option>
+  <option value="10a">10 (Arts)</option>
+  <option value="9s">9 (Science)</option>
+  <option value="9a">9 (Arts)</option>
   <option value="8">Class 8</option>
-  <option value="9">Class 9</option>
-  <option value="10">Class 10</option>
-  <option value="11s">Class 11 (Science)</option>
-  <option value="12s">Class 12 (Science)</option>
-  <option value="11c">Class 11 (Commerce)</option>
-  <option value="12c">Class 12 (Commerce)</option>
+  <option value="7">Class 7</option>
+  <option value="6">Class 6</option>
+  <option value="5">Class 5</option>
+  <option value="4">Class 4</option>
+  <option value="3">Class 3</option>
+  <option value="2">Class 2</option>
+  <option value="1">Class 1</option>
+  <option value="playgroup">Playgroup</option>
+  <option value="nursery">Nursery</option>
+  <option value="prep">Prep</option>
 
 </select>
                   <!-- <label for="exampleDatepicker1" class="form-label">Student Name</label> -->
@@ -117,7 +123,7 @@ height: 100vh !important;
                       <option value="i2">Installment 2 (July)</option>
                       <option value="i3">Installment 3 (October)</option>
                       <option value="i4">Installment 4 (January)</option>
-                      <option value="bus">Bus Fee</option>
+
                       <option value="total">Total</option>
                   </select>
                   <br>
@@ -164,9 +170,7 @@ height: 100vh !important;
        else if(id == 1 && inst == 'i4' || id == 2 && inst == 'i4' || id == 3 && inst == 'i4' || id == 4 && inst == 'i4' || id == 5 && inst == 'i4'){
            $("#money").val(5000);
        }
-       else if(id == 1 && inst == 'bus' || id == 2 && inst == 'bus' || id == 3 && inst == 'bus' || id == 4 && inst == 'bus' || id == 5 && inst == 'bus'){
-           $("#money").val(2450);
-       }
+
        else if(id == 1 && inst == 'total' || id == 2 && inst == 'total' || id == 3 && inst == 'total' || id == 4 && inst == 'total' || id == 5 && inst == 'total'){
            $("#money").val(22000);
        }
@@ -186,90 +190,62 @@ height: 100vh !important;
        else if(id == 6 && inst == 'i4' || id == 7 && inst == 'i4' || id == 8 && inst == 'i4'){
            $("#money").val(6000);
        }
-       else if(id == 6 && inst == 'bus' || id == 7 && inst == 'bus' || id == 8 && inst == 'bus'){
-           $("#money").val(2450);
-       }
+
        else if(id == 6 && inst == 'total' || id == 7 && inst == 'total' || id == 8 && inst == 'total'){
            $("#money").val(25800);
        }
 
 
-       else if(id == 9 && inst == 'i1'|| id == 10 && inst == 'i1'){
+       else if((id == '9s' || id == '9a' || id == '10s' || id == '10a') && inst == 'i1'){
            $("#money").val(8000);
        }
-       else if(id == 9 && inst == 'i2'|| id == 10 && inst == 'i2'){
+       else if((id == '9s' || id == '9a' || id == '10s' || id == '10a') && inst == 'i2'){
            $("#money").val(6800);
        }
-       else if(id == 9 && inst == 'i3'|| id == 10 && inst == 'i3'){
+       else if((id == '9s' || id == '9a' || id == '10s' || id == '10a') && inst == 'i3'){
            $("#money").val(8000);
        }
-       else if(id == 9 && inst == 'i4'|| id == 10 && inst == 'i4'){
+       else if((id == '9s' || id == '9a' || id == '10s' || id == '10a') && inst == 'i4'){
            $("#money").val(6800);
        }
-       else if(id == 9 && inst == 'bus'|| id == 10 && inst == 'bus'){
-           $("#money").val(2450);
-       }
-       else if(id == 9 && inst == 'total'|| id == 10 && inst == 'total'){
+
+       else if((id == '9s' || id == '9a' || id == '10s' || id == '10a') && inst == 'total'){
            $("#money").val(29600);
        }
 
 
-       else if(id == '11s' && inst == 'i1' || id == '12s' && inst == 'i1'){
+       else if((id == '11pe' || id == '11cs' || id == '11m' || id == '12pe' || id == '12cs' || id == '12m') && inst == 'i1'){
            $("#money").val(12000);
        }
-       else if(id == '11s' && inst == 'i2' || id == '12s' && inst == 'i2'){
+       else if((id == '11pe' || id == '11cs' || id == '11m' || id == '12pe' || id == '12cs' || id == '12m') && inst == 'i2'){
            $("#money").val(9800);
        }
-       else if(id == '11s' && inst == 'i3' || id == '12s' && inst == 'i3'){
+       else if((id == '11pe' || id == '11cs' || id == '11m' || id == '12pe' || id == '12cs' || id == '12m') && inst == 'i3'){
            $("#money").val(12000);
        }
-       else if(id == '11s' && inst == 'i4' || id == '12s' && inst == 'i4'){
+       else if((id == '11pe' || id == '11cs' || id == '11m' || id == '12pe' || id == '12cs' || id == '12m') && inst == 'i4'){
            $("#money").val(9800);
        }
-        else if(id == '11s' && inst == 'bus' || id == '12s' && inst == 'bus'){
-           $("#money").val(2450);
-       }
-       else if(id == '11s' && inst == 'total' || id == '12s' && inst == 'total'){
+
+       else if((id == '11pe' || id == '11cs' || id == '11m' || id == '12pe' || id == '12cs' || id == '12m') && inst == 'total'){
            $("#money").val(43600);
        }
 
 
-       else if(id == '11c' && inst == 'i1' || id == '12c' && inst == 'i1'){
-           $("#money").val(11100);
-       }
-       else if(id == '11c' && inst == 'i2' || id == '12c' && inst == 'i2'){
-           $("#money").val(8900);
-       }
-       else if(id == '11c' && inst == 'i3' || id == '12c' && inst == 'i3'){
-           $("#money").val(11100);
-       }
-       else if(id == '11c' && inst == 'i4' || id == '12c' && inst == 'i4'){
-           $("#money").val(8900);
-       }
-       else if(id == '11c' && inst == 'bus' || id == '12c' && inst == 'bus'){
-           $("#money").val(2450);
-       }
-       else if(id == '11c' && inst == 'total' || id == '12c' && inst == 'total'){
-           $("#money").val(40000);
-       }
-
-
-       else if(id == 'nu-ukg' && inst == 'i1'){
+       else if((id == 'playgroup' || id == 'nursery' || id == 'prep') && inst == 'i1'){
            $("#money").val(4500);
        }
-       else if(id == 'nu-ukg' && inst == 'i2'){
+       else if((id == 'playgroup' || id == 'nursery' || id == 'prep') && inst == 'i2'){
            $("#money").val(3500);
        }
-       else if(id == 'nu-ukg' && inst == 'i3'){
+       else if((id == 'playgroup' || id == 'nursery' || id == 'prep') && inst == 'i3'){
            $("#money").val(4500);
        }
-       else if(id == 'nu-ukg' && inst == 'i4'){
+       else if((id == 'playgroup' || id == 'nursery' || id == 'prep') && inst == 'i4'){
            $("#money").val(3500);
        }
-       else if(id == 'nu-ukg' && inst == 'bus'){
-           $("#money").val(2450);
-       }
-       else if(id == 'nu-ukg' && inst == 'total'){
+
+       else if((id == 'playgroup' || id == 'nursery' || id == 'prep') && inst == 'total'){
            $("#money").val(16000);
        }
        

@@ -7,13 +7,12 @@
           <!-- Display visitor count -->
           <p>SCHOOL MANAGEMENT SYSTEM</p>
           <!-- Display time zone -->
-          <p>Q9P3+75H, My Town, My city, My Country </p>
+          <p>Pakistan</p>
         </div>
         <div class="col-md-4">
           <p>Time Zone: <?php
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('Asia/Karachi');
                         $current_time = date('D M d Y H:i:s \G\M\TO (T)');
-                        echo "<p>$current_time</p>";
                         ?></p>
         </div>
         <div class="col-md-4">
@@ -21,7 +20,8 @@
            
           <p>follow us on</p>
           </div>
-          <div class="social-icons">
+          <div class="social-icons  echo "<p>$current_time</p>";
+                      ">
             <a href="#"><i class="fab fa-facebook-f facebook"></i></a>
             <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
             <a href="#"><i class="fab fa-instagram instagram"></i></a>

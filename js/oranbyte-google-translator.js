@@ -1,6 +1,6 @@
 
 const DEFAULT_LANGUAGE = 'en';
-const LANGUAGES = ['en', 'ar', 'hi', 'es', 'fr', 'de', 'it'];
+const LANGUAGES = ['en', 'ur'];
 const LANGUAGE_STYLES = ['code', 'text', 'flag', 'code-flag', 'text-flag'];
 const ORANBYTE_GOOGLE_TRANSLATOR_ID = 'oranbyte-google-translator';
 
@@ -78,12 +78,12 @@ function googleTranslateElementInit() {
 
             setTimeout(() => {
                 createUI(selectedLang.code, selectedLang.option, languages);
-                
+
             }, 0);
 
             invisibleSkipTranslate();
             changeLanguage(defaultSelectedLanguage);
-          
+
         }
     }, 50);
 }
@@ -110,7 +110,7 @@ function changeLanguage(langCode) {
         } else {
             createUI(langCode, 'Language', languages);
         }
-        
+
     } else {
         console.warn('Translate dropdown not found.');
     }
@@ -190,7 +190,7 @@ function createUI(defaultLangCode = defaultSelectedLanguage, defaultLangLabel = 
     const container = document.querySelector('#oranbyte-google-translator');
     container.innerHTML = '';
     container.appendChild(translatorDiv);
-    
+
 }
 
 function invisibleSkipTranslate() {
@@ -203,7 +203,7 @@ function addGoogleTranslateElement(id) {
     const googleTranslateElement = document.createElement('div');
     googleTranslateElement.id = id;
     document.body.appendChild(googleTranslateElement);
-    
+
 }
 
 function removeExtraStylesFromBody() {
@@ -213,7 +213,7 @@ function removeExtraStylesFromBody() {
             body.removeAttribute('style');
             clearInterval(interval);
         }
-    }, 50);    
+    }, 50);
 }
 
 // -----------------------------------------------------
