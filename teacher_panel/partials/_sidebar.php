@@ -1,7 +1,7 @@
 <div class="sidebar">
     <a href="dashboard.php" class="logo">
         <i class='bx bxs-book-reader'></i>
-        <div class="logo-name"><span class="text-warning">D</span><span class="darkTextColor">S</span><span class="text-warning">C</span><span class="darkTextColor">H</span></div>
+        <div class="logo-name"><span>FJGSCK</span></div>
     </a>
     
     <ul class="side-menu-opener">
@@ -21,6 +21,7 @@
         <li><a href="settings.php"><i class='bx bx-cog'></i>Settings</a></li>
     </ul>
     <ul class="side-menu">
+        <li style="padding: 10px 20px; font-size: 12px; color: #888;">Created by SahilDev</li>
         <li>
             <a class="logout" data-bs-toggle="modal" data-bs-target="#logout-modal">
                 <i class='bx bx-log-out-circle'></i>

@@ -1,5 +1,7 @@
 <?php
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 if (isset($_SESSION['uid'])) {
@@ -12,22 +14,22 @@ if (isset($_SESSION['uid'])) {
   mysqli_stmt_bind_param($stmt, "s", $uid);
   mysqli_stmt_execute($stmt);
 
-  $result = mysqli_stmt_get_result($stmt);
-  $row = mysqli_fetch_array($result);
+  mysqli_stmt_bind_result($stmt, $role);
+  $found = mysqli_stmt_fetch($stmt);
 
   mysqli_stmt_close($stmt);
 
-  if ($row && isset($row['role'])) {
-    if ($row['role'] == "admin") {
+  if ($found) {
+    if ($role == "admin") {
       header('Location: admin_panel/dashboard.php');
       exit();
-    } else if ($row['role'] == "owner") {
+    } else if ($role == "owner") {
       header('Location: owner_panel/index.php');
       exit();
-    } else if ($row['role'] == "teacher") {
+    } else if ($role == "teacher") {
       header('Location: teacher_panel/dashboard.php');
       exit();
-    } else if ($row['role'] == "student") {
+    } else if ($role == "student") {
       header('Location: student_panel/index.php');
       exit();
     }
@@ -39,7 +41,7 @@ if (isset($_SESSION['uid'])) {
 
 <head>
   <meta charset="UTF-8">
-  <title>School Management</title>
+  <title>FJGSCK - Login</title>
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +58,8 @@ if (isset($_SESSION['uid'])) {
       <div class="front">
         <img src="images/loginimage.jpg" alt="">
         <div class="text">
-          <span class="text-1">SCHOOL MANAGEMENT SYSTEM<br></span>
-          <span class="text-2">Plan serve program</span>
+          <span class="text-1">FJGSCK<br></span>
+          <span class="text-2">Fatima Jinnah Girls School and College</span>
         </div>
       </div>
 

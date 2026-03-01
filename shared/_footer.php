@@ -5,7 +5,7 @@
           <!-- Insert website logo -->
           <img src="images/company-logo.jpg" alt="Website Logo">
           <!-- Display visitor count -->
-          <p>SCHOOL MANAGEMENT SYSTEM</p>
+          <p>Fatima Jinnah Girls School and College (FJGSCK)</p>
           <!-- Display time zone -->
           <p>Pakistan</p>
         </div>
@@ -20,8 +20,7 @@
            
           <p>follow us on</p>
           </div>
-          <div class="social-icons  echo "<p>$current_time</p>";
-                      ">
+          <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f facebook"></i></a>
             <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
             <a href="#"><i class="fab fa-instagram instagram"></i></a>
@@ -31,7 +30,7 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-12">
-          <p>&copy; <?php echo date('Y'); ?> By <a href="https://www.github.com/ProjectsAndPrograms" target="_blank">ProjectsAndPrograms</a>. All rights reserved.</p>
+          <p>&copy; <?php echo date('Y'); ?> Created by SahilDev. All rights reserved.</p>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="./images/logo.png">
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <title>Fee Payment</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
     <script src="../js/oranbyte-google-translator.js"></script>
     <style type="text/css">
@@ -131,13 +132,18 @@ height: 100vh !important;
                 </div>
               </div>
                
-              <img src="images/qr.jpg" id="qr" style="height: 100%; width: 100%;">
+              <img src="images/qr.jpg" id="qr" style="height: 100%; width: 100%; border-radius: 12px; border: 1px solid #eee; padding: 10px;">
               
-              <button type="submit" class="btn btn-success btn-lg mb-1"
-              style="margin-top: 8%;">Scan To Pay</button>
-
+              <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Scan To Pay</button>
+                <a href="https://wa.me/923465234099?text=Hello%20Principal,%20I%20want%20to%20discuss%20my%20fee%20payment." 
+                   class="btn btn-outline-success btn-lg d-flex align-items-center justify-content-center" 
+                   target="_blank">
+                  <i class='bx bxl-whatsapp' style="font-size: 24px; margin-right: 8px;"></i>
+                  Contact Principal on WhatsApp
+                </a>
+              </div>
             </form>
-
           </div>
         </div>
       </div>

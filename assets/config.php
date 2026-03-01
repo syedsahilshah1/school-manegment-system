@@ -1,16 +1,13 @@
 <?php
     $server = "localhost";
-   
     $user = "root";
-    $password = "";
+    $password = ""; 
     $db = "_sms";
     
     $conn = mysqli_connect($server, $user, $password, $db);
 
     if (!$conn) {
-        header('Location: ../errors/error.html');
+        $response = array('status' => 'error', 'message' => 'Database connection failed: ' . mysqli_connect_error());
+        echo json_encode($response);
         exit();
     }
-
-
-?>

@@ -141,7 +141,7 @@
     <header>
         <div class="logo" title="University Management System">
             <img src="./images/logo.png" alt="">
-            <h2>D<span class="danger">S</span>CH</h2>
+            <h2>FJGSCK</h2>
         </div>
         <div class="navbar">
             <a href="index.php">
@@ -210,41 +210,42 @@
 
                     </div>
                 </div>
-                <br>
-                <div id="oranbyte-google-translator" 
-                        data-default-lang="en"
-                        data-lang-root-style="code-flag"
-                        data-lang-list-style="code-flag"
-                        ></div>
-                <div class="about">
-                    <?php
-                    $query = "select * from students where id='$id'";
-                    $result = $conn->query($query);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<p><h5>Class : " . $row["class"] . "</h5></p>
-                    <p>Section " . $row["section"] . "</p>
-                    <h5>DOB</h5>
-                    <p>" . $row["dob"] . "</p>
-                    <h5>Contact</h5>
-                    <p>" . $row["phone"] . "</p>
-                    <h5>Email</h5>
-                    <p>" . $row["email"] . "</p>
-                    <h5>Address</h5>
-                    <p>" . $row["address"] . "</p>";
+                    <div class="profile-details" style="padding-top: 1.5rem; border-top: 1px solid var(--color-light); margin-top: 1rem;">
+                        <h5 style="margin-bottom: 0.5rem; color: var(--color-primary);">About FJGSCK</h5>
+                        <p style="font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.4;">Fatima Jinnah Girls School and College (FJGSCK) is dedicated to providing high-quality education and empowering future female leaders.</p>
+                        
+                        <?php
+                        // No need for redundant query, using already fetched results if possible, but the original code had multiple selects so I'll keep it simple
+                        $query = "SELECT * FROM students WHERE id='$id'";
+                        $result = $conn->query($query);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "
+                                <div class='detail-item' style='margin-bottom: 0.8rem;'>
+                                    <h5 style='margin-bottom: 0.2rem;'>Class & Section</h5>
+                                    <p>" . $row["class"] . " (Section " . $row["section"] . ")</p>
+                                </div>
+                                <div class='detail-item' style='margin-bottom: 0.8rem;'>
+                                    <h5 style='margin-bottom: 0.2rem;'>Date of Birth</h5>
+                                    <p>" . $row["dob"] . "</p>
+                                </div>
+                                <div class='detail-item' style='margin-bottom: 0.8rem;'>
+                                    <h5 style='margin-bottom: 0.2rem;'>Contact Information</h5>
+                                    <p><i class='bx bxs-phone'></i> " . $row["phone"] . "</p>
+                                    <p><i class='bx bxs-envelope'></i> " . $row["email"] . "</p>
+                                </div>
+                                <div class='detail-item' style='margin-bottom: 0.8rem;'>
+                                    <h5 style='margin-bottom: 0.2rem;'>Residential Address</h5>
+                                    <p style='font-size: 0.8rem;'>" . $row["address"] . "</p>
+                                </div>";
+                            }
                         }
-                    }
-
-                    ?><br>
-
-                    <div style="display: inline;">
-                  
-                    <b><a href="buspanel.php" class="link-btn">Bus Panel</a></b><br>
-                    <b><a href="fee-payment.php" class="link-btn">Pay-Fee</a></b>
-                    
+                        ?>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="fee-payment.php" class="link-btn" style="width: 100%; max-width: none;">Pay-Fee</a>
                     </div>
                 </div>
-            </div>
         </aside>
 
         <main>
@@ -350,15 +351,29 @@
                         $formattedDate = date('d M, Y', strtotime($timestamp));
 
                         $senderId = $row2['sender_id'];
-                        $tableName = ($senderId >= 1000) ? 'admins' : 'teachers';
+                        
+                        // Look up the role in the users table first
+                        $role_sql = "SELECT `role` FROM `users` WHERE `id` = '$senderId' LIMIT 1";
+                        $role_res = mysqli_query($conn, $role_sql);
+                        $sender_role = "teacher"; // default
+                        if ($role_res && $role_row = mysqli_fetch_assoc($role_res)) {
+                            $sender_role = $role_row['role'];
+                        }
+
+                        if ($sender_role == 'admin') {
+                            $tableName = 'admins';
+                        } else {
+                            $tableName = 'teachers';
+                        }
+                        
                         $sql = "SELECT `fname`, `lname` FROM `$tableName` WHERE id = '$senderId' LIMIT 1";
 
                         $result = mysqli_query($conn, $sql);
-                        if ($result->num_rows > 0) {
+                        if ($result && $result->num_rows > 0) {
                             $row = $result->fetch_assoc();
-                            $sender = ucfirst(strtolower($row['fname'])) . " " . strtolower($row['lname']);
+                            $sender = ucfirst(strtolower($row['fname'])) . " " . ucfirst(strtolower($row['lname']));
                         } else {
-                            $sender = "REMOVED";
+                            $sender = "SYSTEM";
                         }
 
                         echo "<div class='teacher'>
@@ -446,10 +461,12 @@
     </script>
 
 
+    <footer style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.05);">
+        <p>&copy; <?php echo date('Y'); ?> Created by SahilDev. All rights reserved.</p>
+    </footer>
     <script type="text/javascript" src="app.js"></script>
     <!-- <script type="text/javascript" src="timeTable.js"></script> -->
     <script type="text/javascript" src="index.js"></script>
-    <script src="../js/oranbyte-google-translator.js"></script>
 </body>
 
 </html>

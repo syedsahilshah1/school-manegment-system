@@ -601,3 +601,35 @@ footer p {
   transform: scale(120%);
   color: rgb(47, 221, 126);
 }
+
+/* Management Profiles Styles */
+.leadership-card {
+    border-radius: 20px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.leadership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.profile-img-container {
+    transition: transform 0.3s ease;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.leadership-card:hover .profile-img-container {
+    transform: scale(1.05);
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    color: var(--darkOne);
+}
